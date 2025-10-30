@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+  }
+  
+  .outer {
+    background-image: url("pilier2.png"), url("pilier2.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: calc(100% - 20px) 220px, 20px 220px;
+    background-attachment: fixed;
+    background-size: 100px 79%, 100px 79%;
+    position: relative;
+  }
+  
+  #noline {
+    text-decoration: none;
+  }
+  
+  .flame {
+    position: fixed;
+    top: 22px;
+    font-size: 150px;
+  }
+  
+  .flame-left {
+    left: -34px;
+  }
+  
+  .flame-right {
+    right: -28px;
+  }
+  
+  .very_big {
+    border-radius: 20px;
+    padding: 20px;
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  header {
+    box-shadow: 0px 0px 20px black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    border-radius: 200px;
+    background-color: #eda04b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    text-decoration: none;
+  }
+  
+  .titre {
+    width: max-content;
+    position: relative;
+    margin: auto;
+  }
+  
+  .logo {
+    border-radius: 250px;
+    height: 75px;
+    width: 75px;
+    padding-left: 10px;
+  }
+  
+  .logo2 {
+    border-radius: 250px;
+    height: 75px;
+    width: 75px;
+    padding-right: 10px;
+  }
+  
+  .absolute_nav a:hover {
+    box-shadow: inset 0px 0px 20px white;
+    transition: all 0.75s;
+    transform: scale(105%);
+    border: 2px solid #eda04b;
+  }
+  
+  .absolute_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .absolute_nav a {
+    background-color: #eda04b;
+    text-transform: capitalize;
+    padding: 10px;
+    border: 2px solid #eda04b;
+    border-radius: 200px;
+    font-weight: 800;
+    font-size: larger;
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  .relative_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+  }
+  
+  .relative_nav a {
+    background-color: #f3723a;
+    padding: 10px;
+    border-radius: 200px;
+    font-size: larger;
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  h2 {
+    font-size: xx-large;
+    color: #f3723a;
+    font-style: italic;
+    font-weight: bolder;
+    text-decoration: underline #eda04b;
+  }
+  
+  h3 {
+    color: #4b98ed;
+    font-size: x-large;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 400px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: slideIn 1s ease forwards;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+  
+  .card h3 {
+    padding: 15px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .card p {
+    padding: 15px;
+    line-height: 1.5;
+    color: #555;
+  }
+
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      width: 95%;
+      max-width: 400px;
+    }
+  
+    .card img {
+      height: 150px;
+    }
+  }
+  
+  .bonus {
+    text-decoration: none;
+    color: black;
+    transition: all 0.75s;
+  }
+  
+  footer font {
+    font-weight: 500;
+  }
+  
+  footer {
+    box-shadow: 0px 0px 20px black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 50px;
+    background-color: #eda04b;
+    display: flex;
+    padding: 5px 60px;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding-inline-start: 20px;
+    margin-block-start: 5px;
+  }
+  
+  .footer .bonus:hover {
+    font-size: 25px;
+    color: white;
+  }
+  
+  .foot {
+    width: 50%;
+    text-align: left;
+  }
+  
+  @media all and (max-width: 640px) {
+    .outer {
+      background-image: none;
+    }
+  
+    .flame {
+      display: none;
+    }
+  
+    .very_big {
+      width: -webkit-fill-available;
+    }
+  
+    .footer .foot:nth-child(3) {
+      display: none;
+    }
+  
+    .foot {
+      width: 33%;
+      align-self: center;
+      font-size: 12px;
+    }
+  
+    .footer .foot:nth-child(2) {
+      width: 50%;
+    }
+  }
